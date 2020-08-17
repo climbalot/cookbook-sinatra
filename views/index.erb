@@ -1,5 +1,10 @@
 <ul>
-  <li>I'm in a <em>view</em>!</li>
+  <% @cookbook.recipes.each_with_index do |recipe, index| %>
+  <li>
+    <%= "#{recipe.name} - #{recipe.description}" %>
+    <a href="/destroy/<%= index %>">Destroy</a>
+  </li> 
+  <% end %>
 </ul>
 
-<%= Time.now %>
+<a href='/new'>Create a new recipe</a>

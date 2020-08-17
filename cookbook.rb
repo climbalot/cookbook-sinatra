@@ -1,6 +1,7 @@
 require 'csv'
 
 class Cookbook
+  attr_reader :recipes
   
   def initialize(csv_file_path)
     @recipes = []
